@@ -1,0 +1,66 @@
+body {
+    margin: 10px 10px auto;
+	font-family: 'book antiqua';
+}
+
+.field {
+    background-color: #5F7EAA;
+	font-size: large;
+    color: #FFF;
+    height: 45px;;
+	padding: 20px;
+    width: 750px;
+    border-radius: 5px;
+	box-shadow: 1px 5px 1px #3D5C88;
+}
+
+.field input[type='text']{
+	padding: 5px;
+	font-family: 'book antiqua';
+	font-size: large;
+	width: 500px;
+	background: #EEE;
+	border-radius: 3px;
+	border: 2px solid #2C4B77;
+	height: 30px;
+}
+
+.field input[type='submit']{
+	font-family: 'book antiqua';
+	color: #FFF;
+	font-size: large;
+	background: #373737;
+	border-radius: 3px;
+	border: none;
+	box-shadow: 1px 3px 1px #262626;
+	height: 40px;
+}
+
+.field input[type='submit']:hover{
+	font-family: 'book antiqua';
+	color: #FFF;
+	font-size: large;
+	background: #484848;
+	border-radius: 3px;
+	border: none;
+	box-shadow: 1px 3px 1px #262626;
+	height: 40px;
+}
+
+.list table{
+	padding: 10px;	
+}
+
+.odd {
+    background: #E8EDFF;
+}
+
+a:link {
+	color: #696969;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #373737;
+	text-decoration: none;
+}

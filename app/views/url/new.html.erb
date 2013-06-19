@@ -1,0 +1,37 @@
+<div class='field'>
+    <% form_for :link, @link, :url => {:controller => 'url', :action => 'create' } do |f| %>
+    　Enter link : <%= f.text_field :long %>
+    <%= f.submit 'Shorten URL' %>
+    <% end %>
+</div>
+<br>
+<br>
+<div class='list'>
+<table width='80%' cellspacing= '5px' cellpadding= '5px'>
+    <tr>
+        <td>
+            ID
+        </td>
+        <td>
+            LONG URL
+        </td>
+        <td width='100px'>
+            SHORT URL
+        </td>
+    </tr>
+    <% @links.each do |link| %>
+    <tr class='<%= cycle('odd','even') %>'>
+        <td>
+            <%= link.id %>
+        </td>
+        <td>
+            <a href='<%= link.long %>'><%= link.long %></a>
+        </td>
+        <td>
+            <%= link_to 'localhost:3000/'+link.short, link.short, :short => link.short %>
+        </td>
+    </tr>
+    <% end %>
+</table>
+</div>
+
