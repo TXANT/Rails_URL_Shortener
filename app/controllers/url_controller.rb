@@ -13,6 +13,7 @@ class UrlController < ApplicationController
     id = Url.returnId[0][:count]
     @link = Url.new(params[:link])
     @short_url = ("%d%d"%[rand(100), Time.now.to_i]).to_i.to_s(36)
+    @short_url = Digest::MD5.hexdigest(@short_url)[2,6]
     @link[:id] = (id.to_i+1)
     @link[:short] = @short_url
     @link[:long] = (params[:link][:long]).to_s[0..6] != 'http://' && (params[:link][:long]).to_s[0..7] != 'https://'? ('http://'+(params[:link][:long]).to_s) : ((params[:link][:long]).to_s)
